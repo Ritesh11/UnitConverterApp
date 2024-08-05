@@ -22,6 +22,7 @@ class MainActivity : ComponentActivity() {
             UnitConverterAppTheme {
                 Surface(modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background) {
+                    BaseScreen()
                 }
             }
         }
