@@ -10,6 +10,9 @@ import kotlinx.coroutines.launch
 
 class ConverterViewModel(private val repository: ConverterRepository) : ViewModel() {
 
+    var resultList = repository.getAllResult()
+
+
     fun getConversions() = listOf(
         Conversion(1, "Pounds to Kilograms", "lbs", "Kg", 0.453592),
         Conversion(2, "Kilograms to Pounds", "Kg", "lbs", 2.20462),
@@ -43,5 +46,7 @@ class ConverterViewModel(private val repository: ConverterRepository) : ViewMode
             repository.deleteAllResult()
         }
     }
+
+    fun getConverterResult(){}
 
 }
