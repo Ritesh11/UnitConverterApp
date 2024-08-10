@@ -30,6 +30,8 @@ fun BaseScreen(
         Spacer(modifier = modifier.height(20.dp))
         HistoryScreen(historyList, { item ->
             converterViewModel.deleteResult(item)
+        }, {
+            converterViewModel.deleteAll()
         })
     }
 
