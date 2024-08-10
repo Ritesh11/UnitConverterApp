@@ -1,4 +1,4 @@
-package com.jio.unitconverterapp
+package com.jio.unitconverterapp.composable
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -8,6 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.jio.unitconverterapp.ConverterViewModel
 
 @Composable
 fun BaseScreen(
