@@ -47,6 +47,5 @@ class ConverterViewModel(private val repository: ConverterRepository) : ViewMode
         }
     }
 
-    fun getConverterResult(){}
 
 }

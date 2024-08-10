@@ -8,8 +8,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.jio.unitconverterapp.compose.BaseScreen
-import com.jio.unitconverterapp.data.ConverterDatabase
-import com.jio.unitconverterapp.data.ConverterRepositoryImpl
 import com.jio.unitconverterapp.presentation.viewmodel.ConverterViewmodelFactory
 import com.jio.unitconverterapp.ui.theme.UnitConverterAppTheme
 import dagger.hilt.android.AndroidEntryPoint

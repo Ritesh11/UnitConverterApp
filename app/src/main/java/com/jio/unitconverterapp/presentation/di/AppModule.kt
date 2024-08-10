@@ -2,7 +2,6 @@ package com.jio.unitconverterapp.presentation.di
 
 import android.app.Application
 import androidx.room.Room
-import com.jio.unitconverterapp.data.ConverterDAO
 import com.jio.unitconverterapp.data.ConverterDatabase
 import com.jio.unitconverterapp.data.ConverterRepository
 import com.jio.unitconverterapp.data.ConverterRepositoryImpl
