@@ -1,4 +1,4 @@
-package com.jio.unitconverterapp
+package com.jio.unitconverterapp.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
