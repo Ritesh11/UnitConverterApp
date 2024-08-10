@@ -1,4 +1,4 @@
-package com.jio.unitconverterapp
+package com.jio.unitconverterapp.data
 
 data class Conversion(
     val id: Int,
