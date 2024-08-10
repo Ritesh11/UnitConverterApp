@@ -19,7 +19,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import androidx.sqlite.db.SupportSQLiteOpenHelper
 import com.jio.unitconverterapp.presentation.viewmodel.ConverterViewModel
 import com.jio.unitconverterapp.presentation.viewmodel.ConverterViewmodelFactory
 import com.jio.unitconverterapp.compose.converter.TopScreen
