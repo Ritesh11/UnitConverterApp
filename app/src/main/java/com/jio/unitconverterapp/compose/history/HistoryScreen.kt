@@ -24,19 +24,27 @@ fun HistoryScreen(
 ) {
 
     Column {
-        Row(modifier = modifier
-            .fillMaxWidth()
-            .padding(bottom = 10.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.SpaceBetween) {
+        if (list.value.isNotEmpty()) {
+            Row(
+                modifier = modifier
+                    .fillMaxWidth()
+                    .padding(bottom = 10.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
 
-            Text(text = "History",
-                color = Color.Gray)
+                Text(
+                    text = "History",
+                    color = Color.Gray
+                )
 
-            OutlinedButton(onClick = {clearAllTask()}) {
-                Text(text = "Clear All",
-                    color = Color.Red)
+                OutlinedButton(onClick = { clearAllTask() }) {
+                    Text(
+                        text = "Clear All",
+                        color = Color.Red
+                    )
 
+                }
             }
         }
     }
