@@ -16,6 +16,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Size
@@ -30,7 +31,7 @@ import com.jio.unitconverterapp.data.Conversion
 @Composable
 fun ConversionMenu(list: List<Conversion>, modifier: Modifier = Modifier, convert: (Conversion) -> Unit) {
 
-    var displayText by remember {
+    var displayText by rememberSaveable {
         mutableStateOf("Select the conversion type")
     }
 

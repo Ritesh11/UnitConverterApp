@@ -18,20 +18,25 @@ import com.jio.unitconverterapp.compose.history.HistoryScreen
 fun BaseScreen(
     factory: ConverterViewmodelFactory,
     modifier: Modifier = Modifier,
-    converterViewModel: ConverterViewModel = viewModel(factory = factory)
+    viewModel: ConverterViewModel = viewModel(factory = factory)
 ) {
-    val list = converterViewModel.getConversions()
-    val historyList = converterViewModel.resultList.collectAsState(initial = emptyList())
+    val list = viewModel.getConversions()
+    val historyList = viewModel.resultList.collectAsState(initial = emptyList())
 
     Column(modifier = modifier.padding(30.dp)) {
-        TopScreen(list) { message1, message2 ->
-            converterViewModel.addResult(message1, message2)
+        TopScreen(
+            list,
+            viewModel.selectedConversion,
+            viewModel.inputText,
+            viewModel.typedValue
+        ) { message1, message2 ->
+            viewModel.addResult(message1, message2)
         }
         Spacer(modifier = modifier.height(20.dp))
         HistoryScreen(historyList, { item ->
-            converterViewModel.deleteResult(item)
+            viewModel.deleteResult(item)
         }, {
-            converterViewModel.deleteAll()
+            viewModel.deleteAll()
         })
     }
 
