@@ -2,7 +2,6 @@ package com.jio.unitconverterapp
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.jio.unitconverterapp.data.Conversion
 import com.jio.unitconverterapp.data.ConversionResult
 import com.jio.unitconverterapp.data.ConverterRepository
