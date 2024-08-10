@@ -8,10 +8,14 @@ import com.jio.unitconverterapp.data.ConversionResult
 @Composable
 fun HistoryScreen(
     list: State<List<ConversionResult>>,
+    onCloseTask: (ConversionResult) -> Unit,
     modifier: Modifier = Modifier
 ) {
 
     HistoryList(list = list,
-        onCloseTask = {})
+        onCloseTask = {item ->
+            onCloseTask(item)
+        }
+    )
 
 }
