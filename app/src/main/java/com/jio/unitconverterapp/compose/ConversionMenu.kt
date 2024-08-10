@@ -1,4 +1,4 @@
-package com.jio.unitconverterapp.composable
+package com.jio.unitconverterapp.compose
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -25,7 +25,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.unit.toSize
-import com.jio.unitconverterapp.Conversion
+import com.jio.unitconverterapp.data.Conversion
 
 @Composable
 fun ConversionMenu(list: List<Conversion>, modifier: Modifier = Modifier, convert: (Conversion) -> Unit) {

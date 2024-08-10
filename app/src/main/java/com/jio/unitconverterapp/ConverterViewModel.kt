@@ -1,6 +1,7 @@
 package com.jio.unitconverterapp
 
 import androidx.lifecycle.ViewModel
+import com.jio.unitconverterapp.data.Conversion
 
 class ConverterViewModel: ViewModel() {
 

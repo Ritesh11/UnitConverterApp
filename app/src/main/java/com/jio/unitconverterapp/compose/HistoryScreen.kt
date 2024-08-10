@@ -1,4 +1,4 @@
-package com.jio.unitconverterapp.composable
+package com.jio.unitconverterapp.compose
 
 import androidx.compose.runtime.Composable
 

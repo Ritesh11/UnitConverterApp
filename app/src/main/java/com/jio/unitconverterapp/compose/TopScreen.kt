@@ -1,11 +1,11 @@
-package com.jio.unitconverterapp.composable
+package com.jio.unitconverterapp.compose
 
 import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import com.jio.unitconverterapp.Conversion
+import com.jio.unitconverterapp.data.Conversion
 import java.math.BigDecimal
 import java.math.RoundingMode
 

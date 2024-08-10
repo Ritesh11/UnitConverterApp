@@ -1,4 +1,4 @@
-package com.jio.unitconverterapp.composable
+package com.jio.unitconverterapp.compose
 
 import android.content.Context
 import android.widget.Toast
@@ -10,8 +10,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
@@ -25,7 +25,7 @@ import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.jio.unitconverterapp.Conversion
+import com.jio.unitconverterapp.data.Conversion
 
 @Composable
 fun InputBlock(
@@ -69,7 +69,7 @@ fun InputBlock(
 
         Spacer(modifier = modifier.height(20.dp))
 
-        ElevatedButton(onClick = {
+        OutlinedButton(onClick = {
             if (inputText.value.isNotEmpty()) {
                 calculate(inputText.value)
             } else {
