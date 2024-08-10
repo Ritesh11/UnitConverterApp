@@ -47,14 +47,12 @@ fun HistoryScreen(
                 }
             }
         }
+
+        HistoryList(list = list,
+            onCloseTask = {item ->
+                onCloseTask(item)
+            }
+        )
     }
-
-
-
-    HistoryList(list = list,
-        onCloseTask = {item ->
-            onCloseTask(item)
-        }
-    )
 
 }

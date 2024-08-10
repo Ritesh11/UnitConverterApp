@@ -29,7 +29,12 @@ import androidx.compose.ui.unit.toSize
 import com.jio.unitconverterapp.data.Conversion
 
 @Composable
-fun ConversionMenu(list: List<Conversion>, modifier: Modifier = Modifier, convert: (Conversion) -> Unit) {
+fun ConversionMenu(
+    list: List<Conversion>,
+    isLandscape: Boolean,
+    modifier: Modifier = Modifier,
+    convert: (Conversion) -> Unit
+) {
 
     var displayText by rememberSaveable {
         mutableStateOf("Select the conversion type")
@@ -51,25 +56,45 @@ fun ConversionMenu(list: List<Conversion>, modifier: Modifier = Modifier, conver
 
 
     Column {
+        if (isLandscape) {
+            OutlinedTextField(
+                value = displayText,
+                onValueChange = { displayText = it },
+                textStyle = TextStyle(
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Bold
+                ),
+                modifier = modifier
+                    .onGloballyPositioned {
+                        textFieldSize = it.size.toSize()
+                    },
+                label = { Text(text = "Conversion type") },
+                trailingIcon = {
+                    Icon(icon, contentDescription = "icon",
+                        modifier.clickable { expanded = !expanded })
+                }, readOnly = true
+            )
+        } else {
+            OutlinedTextField(
+                value = displayText,
+                onValueChange = { displayText = it },
+                textStyle = TextStyle(
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Bold
+                ),
+                modifier = modifier
+                    .fillMaxWidth()
+                    .onGloballyPositioned {
+                        textFieldSize = it.size.toSize()
+                    },
+                label = { Text(text = "Conversion type") },
+                trailingIcon = {
+                    Icon(icon, contentDescription = "icon",
+                        modifier.clickable { expanded = !expanded })
+                }, readOnly = false
+            )
+        }
 
-        OutlinedTextField(
-            value = displayText,
-            onValueChange = { displayText = it },
-            textStyle = TextStyle(
-                fontSize = 20.sp,
-                fontWeight = FontWeight.Bold
-            ),
-            modifier = modifier
-                .fillMaxWidth()
-                .onGloballyPositioned {
-                    textFieldSize = it.size.toSize()
-                },
-            label = { Text(text = "Conversion type") },
-            trailingIcon = {
-                Icon(icon, contentDescription = "icon",
-                    modifier.clickable { expanded = !expanded })
-            }, readOnly = false
-        )
 
 
         DropdownMenu(
